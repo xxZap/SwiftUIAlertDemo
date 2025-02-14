@@ -1,0 +1,15 @@
+{
+  "originHash" : "4cc8150fa6cc0795ad4acf3c19a1404d4d295d9e2ee702ecb48e9a6d24e456a3",
+  "pins" : [
+    {
+      "identity" : "swiftuialert",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xxZap/SwiftUIAlert",
+      "state" : {
+        "branch" : "main",
+        "revision" : "297ff962de8500a9e770c96a75e889583136d7b3"
+      }
+    }
+  ],
+  "version" : 3
+}
