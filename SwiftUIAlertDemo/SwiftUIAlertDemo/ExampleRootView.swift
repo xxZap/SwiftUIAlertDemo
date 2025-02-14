@@ -15,6 +15,7 @@ struct ExampleRootView: View {
     var body: some View {
         NavigationStack {
             ExampleView()
+                .navigationTitle("SwiftUIAlert Demo App")
         }
         .registerAlertController(alertController)       // <--- Important: register an AlertController instance on the root
                                                         //      to make it accassible to all the subviews through a dedicated Environment variable

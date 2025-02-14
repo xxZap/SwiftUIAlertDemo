@@ -56,9 +56,12 @@ class ExampleViewModel: ObservableObject {
                 // one limitation of SwiftUI is that there's no completion on system alert show/hide action
                 // and if you try to present an alert while another one is dismissing, unpredictable things can happen.
                 // for the moment, a programmatic delay is needed.
-                // 300 milliseconds are safe. Shorter delays may be useless
+                //
+                // While for iOS18+ it seems fine to don't use any delay,
+                // on iOS17 and previous, the delay seems needed for unknown reasons.
+                // 200 milliseconds are safe. Shorter delays may be useless
                 Task {
-                    try? await Task.sleep(for: .milliseconds(300))
+                    try? await Task.sleep(for: .milliseconds(200))
                     self?.alertPublisher.send(SwiftUIAlert(title: "Callback", message: "You see another alert", alertButtons: [
                         AlertButton("Ok") {
                             // Whatever the viewmodel wants to do here...
